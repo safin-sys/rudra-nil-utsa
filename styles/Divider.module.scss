@@ -1,0 +1,19 @@
+.dividerCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    .vline {
+        height: 5rem;
+        width: .2rem;
+        background: linear-gradient(to bottom, #4CFD46, #D0FC4B);
+        z-index: 1;
+    }
+    .hline {
+        position: absolute;
+        width: calc(50vw - .5rem);
+        height: 2px;
+        background-color: #111;
+        z-index: 0;
+    }
+}
