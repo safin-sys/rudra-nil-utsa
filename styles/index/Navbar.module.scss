@@ -57,6 +57,7 @@
         transform: translateX(50%);
         background-color: #030302;
         transition: all .2s ease-in-out;
+        z-index: 2;
         ul {
             height: 300px;
             display: flex;
