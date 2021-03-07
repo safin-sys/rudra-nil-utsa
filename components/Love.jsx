@@ -22,8 +22,10 @@ const Love = () => {
     return (
         <section className={style.loveContainer}>
             <header>
-                <h1>This Is What I Love Doing</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quasi corporis odit ad ea recusandae asperiores perspiciatis quaerat.</p>
+                <h1>Skills</h1>
+                <p>
+                    There is no difference between my skills and what I actually love doing. Here's what I love doing or my skills at a glance.
+                </p>
             </header>
             <div className={style.skills}>
                 {skills.map((skill, i) => {
