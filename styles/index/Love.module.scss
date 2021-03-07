@@ -1,0 +1,58 @@
+.loveContainer {
+    display: grid;
+    place-content: center;
+    margin: 4rem 0;
+    header {
+        margin: auto 7.5%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: .8rem;
+            color: #888;
+            max-width: 72ch;
+            text-align: center;
+        }
+    }
+    .skills {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-between;
+        .circleCon {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            h2 {
+                position: absolute;
+                color: #999;
+                top: 50%;
+                left: 50%;
+                transform: translate(-45%, -105%);
+                font-size: 1.5rem;
+                span {
+                    color: #999;
+                }
+            }
+            h1 {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .loveContainer {
+        .skills {
+            margin: 4rem auto 0 auto;
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+}

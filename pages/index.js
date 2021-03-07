@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Divider from '../components/Divider'
 import Hero from '../components/Hero'
+import Love from '../components/Love'
 import Navbar from '../components/Navbar'
 
 export default function Home() {
@@ -13,12 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Divider direction="right" />
-      <div style={{
-        width: "20px",
-        height: "200px",
-        margin: "20px auto",
-        backgroundColor: "white"
-      }}></div>
+      <Love />
       <Divider direction="left" />
       <div style={{
         width: "20px",
