@@ -4,7 +4,7 @@ import { BiCoffee } from 'react-icons/bi'
 export default function Hero() {
     return (
         <div className={`${style.heroContainer} container`}>
-            <h1>Hello Guys! <br/> I'm Rudra.</h1>
+            <h1 className="gradientTitle">Hello Guys! <br/> I'm Rudra.</h1>
             <button className="regular-btn"><BiCoffee />Explore</button>
         </div>
     )

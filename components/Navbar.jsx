@@ -1,7 +1,7 @@
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { FiTwitter, FiInstagram, FiGithub } from 'react-icons/fi'
 import { useRef } from 'react'
-import style from '../styles/index/Navbar.module.scss'
+import style from '../styles/Navbar.module.scss'
 
 const Navbar = () => {
     const mobileNav = useRef()
@@ -20,7 +20,7 @@ const Navbar = () => {
         <header className={style.header}>
             <nav className="container" ref={nav}>
                 <h1>
-                    Rudra Nil Utsa
+                    <a href="/">Rudra Nil Utsa</a>
                 </h1>
                 <ul>
                     <li><a href="#">Home</a></li>

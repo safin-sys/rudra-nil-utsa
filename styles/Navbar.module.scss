@@ -8,9 +8,12 @@
         overflow: hidden;
         position: relative;
         h1 {
-            color: white;
             font-size: 1.2rem;
             white-space: nowrap;
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
         ul {
             list-style: none;

@@ -2,14 +2,6 @@
     display: grid;
     place-content: center;
     height: calc(90vh - 64px);
-    h1 {
-        font-family: 'Gilroy', sans-serif;
-        font-size: 4rem;
-        text-align: center;
-        background: linear-gradient(to left, #4CFD46, #D0FC4B);
-        background-clip: text;
-        color: transparent;
-    }
     button {
         width: fit-content;
         justify-self: center;
