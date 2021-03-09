@@ -9,9 +9,7 @@ const Talk = () => {
             position: toast.POSITION.BOTTOM_LEFT
         })
     }
-    const handleSubmit = e => {
-        e.preventDefault();
-        e.target.reset();
+    const handleSubmit = () => {
         notify();
     }
     return (
