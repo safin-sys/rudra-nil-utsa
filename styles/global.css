@@ -46,6 +46,10 @@ button:focus {
   color: transparent;
 }
 
+.Toastify__progress-bar--dark {
+  background: #00C853 !important;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 85%;

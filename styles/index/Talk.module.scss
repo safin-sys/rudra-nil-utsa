@@ -1,0 +1,47 @@
+.talk {
+    margin: 4rem auto;
+    display: grid;
+    place-content: center;
+    .talkCon {
+        max-width: 400px;
+        header {
+            margin-bottom: 1rem;
+            .hline {
+                height: .2rem;
+                width: 2.2rem;
+                background: linear-gradient(to left, #4CFD46, #D0FC4B);
+                z-index: 1;
+            }
+            h1 {
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+            p {
+                font-size: .8rem;
+                color: #6d6d6d;
+                line-height: 1.2rem;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+            input,
+            textarea {
+                background-color: transparent;
+                padding: .5rem .5rem;
+                border: 2px solid #2E2F2F;
+                font-size: .8rem;
+            }
+            button {
+                display: flex;
+                align-items: center;
+                gap: .4rem;
+                padding: .4rem 1rem;
+                width: fit-content;
+                background-color: #74FE48;
+                border: none;
+            }
+        }
+    }
+}

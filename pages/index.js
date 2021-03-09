@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Love from '../components/Love'
 import Navbar from '../components/Navbar'
+import Talk from '../components/Talk'
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <Hero />
       <Divider direction="right" />
       <Love />
+      <Divider direction="left" />
+      <Talk />
       <Footer />
     </>
   )
