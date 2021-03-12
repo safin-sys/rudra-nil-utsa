@@ -23,10 +23,10 @@ const Navbar = () => {
                     <a href="/">Rudra Nil Utsa</a>
                 </h1>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Softwares</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/soft">Softwares</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><button className="regular-btn">Get In Touch</button></li>
                 </ul>
                 <button onClick={handleMenuBtn} className={`${style.menuBtn} btnActive`} ref={menuBtn}><AiOutlineMenu /></button>
@@ -34,10 +34,10 @@ const Navbar = () => {
             </nav>
             <div className={style.mobileNav} ref={mobileNav}>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Softwares</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/soft">Softwares</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><button className="regular-btn">Get In Touch</button></li>
                 </ul>
                 <div className={style.social}>

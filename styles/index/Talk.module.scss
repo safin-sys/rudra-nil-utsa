@@ -2,6 +2,7 @@
     margin: 4rem auto;
     display: grid;
     place-content: center;
+    color: white;
     .talkCon {
         max-width: 400px;
         header {
@@ -41,6 +42,7 @@
                 width: fit-content;
                 background-color: #74FE48;
                 border: none;
+                color: white;
             }
         }
     }
