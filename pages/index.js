@@ -7,7 +7,27 @@ import Navbar from '../components/Navbar'
 import Services from '../components/Services'
 import Talk from '../components/Talk'
 
-export default function Home() {
+export const getStaticProps = () => {
+  const services = [
+      {
+          name: "Windows Applications",
+          des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem labore veritatis similique maxime excepturi officia."
+      },
+      {
+          name: "Articles for your website",
+          des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem labore veritatis similique maxime excepturi officia."
+      },
+      {
+          name: "Android Apps",
+          des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem labore veritatis similique maxime excepturi officia."
+      },
+  ]
+  return {
+      props: { services }
+  }
+}
+
+export default function Home({ services }) {
   return (
     <>
       <Head>
@@ -19,7 +39,7 @@ export default function Home() {
       <Divider direction="right" />
       <Love />
       <Divider direction="left" />
-      <Services />
+      <Services services={services} />
       <Divider direction="right" />
       <Talk />
       <Footer />
