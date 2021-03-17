@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import style from "../styles/404.module.scss"
 
@@ -12,7 +11,6 @@ export default function NotFound() {
                     <h1 className={`${style.message} gradientTitle`}>This page could not be found.</h1>
                 </div>
             </main>
-            <Footer />
         </>
     )
 }

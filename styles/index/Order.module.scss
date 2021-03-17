@@ -1,0 +1,67 @@
+.orderCon {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 4rem auto;
+    header {
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: .8rem;
+            color: #6d6d6d;
+        }
+    }
+    main {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        width: 100%;
+        .card {
+            height: 380px;
+            width: 250px;
+            background-color: #191919;
+            padding: 1.5rem;
+            position: relative;
+            svg {
+                height: 3rem;
+                width: 3rem;
+                fill: #74FE48;
+            }
+            .title {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: .5rem;
+            }
+            .price {
+                font-size: .9rem;
+            }
+            p {
+                font-size: .9rem;
+                color: #6d6d6d;
+                margin-top: 1rem;
+            }
+            button {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .orderCon {
+        main {
+            .card {
+                min-width: 280px;
+            }
+        }
+    }   
+}

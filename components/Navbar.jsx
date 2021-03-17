@@ -2,6 +2,8 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { FiTwitter, FiInstagram, FiGithub } from 'react-icons/fi'
 import { useRef } from 'react'
 import style from '../styles/Navbar.module.scss'
+import Link from "next/link"
+import { Router, useRouter } from 'next/router'
 
 const Navbar = () => {
     const mobileNav = useRef()
@@ -22,24 +24,12 @@ const Navbar = () => {
                 <h1>
                     <a href="/">Rudra Nil Utsa</a>
                 </h1>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/soft">Softwares</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><button className="regular-btn">Get In Touch</button></li>
-                </ul>
+                <LinkList />
                 <button onClick={handleMenuBtn} className={`${style.menuBtn} btnActive`} ref={menuBtn}><AiOutlineMenu /></button>
                 <button onClick={handleMenuBtn} className={style.closeBtn} ref={closeBtn}><AiOutlineClose /></button>
             </nav>
             <div className={style.mobileNav} ref={mobileNav}>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/soft">Softwares</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><button className="regular-btn">Get In Touch</button></li>
-                </ul>
+                <LinkList />
                 <div className={style.social}>
                     <a href="#"><FiTwitter /></a>
                     <a href="#"><FiInstagram /></a>
@@ -51,3 +41,20 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+const LinkList = () => {
+    const router = useRouter();
+    const handleClick = e => {
+        e.preventDefault();
+        router.push("/#talk")
+    }
+    return (
+        <ul>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/soft">Softwares</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><button onClick={handleClick} className="regular-btn">Get In Touch</button></li>
+        </ul>
+    )
+}

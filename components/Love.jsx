@@ -20,7 +20,7 @@ const Love = () => {
         ]
     )
     return (
-        <section className={style.loveContainer}>
+        <section id="love" className={style.loveContainer}>
             <header>
                 <h1>Skills</h1>
                 <p>

@@ -1,0 +1,38 @@
+.main {
+    color: white;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    .title {
+        font-size: 1.5rem;
+    }
+    .hline,
+    .vline {
+        background: linear-gradient(to left, #4CFD46, #D0FC4B);
+    }
+    .vline {
+        height: 10rem;
+        width: .2rem;
+    }
+    .hline {
+        display: none;
+        width: 4rem;
+        height: .2rem;
+    }
+    p {
+        max-width: 70ch;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column !important;
+        .hline {
+            display: block;
+            margin: 1rem 0 2rem 0;
+        }
+        .vline {
+            display: none;
+        }
+    }
+}

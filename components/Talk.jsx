@@ -13,7 +13,7 @@ const Talk = () => {
         notify();
     }
     return (
-        <div className={`${style.talk} container`}>
+        <div id="talk" className={`${style.talk} container`}>
             <div className={style.talkCon}>
                 <header>
                     <div className={style.hline}></div>
