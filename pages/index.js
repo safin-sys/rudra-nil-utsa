@@ -60,7 +60,7 @@ export default function Home({ services, packs }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero />
+      <Hero title="Hello Guys! I'm Rudra." btn="Explore" />
       <Divider direction="right" />
       <Love />
       <Divider direction="left" />

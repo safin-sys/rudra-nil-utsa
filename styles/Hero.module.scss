@@ -2,6 +2,9 @@
     display: grid;
     place-content: center;
     height: calc(90vh - 64px);
+    h1 {
+        max-width: 10ch;
+    }
     button {
         width: fit-content;
         justify-self: center;

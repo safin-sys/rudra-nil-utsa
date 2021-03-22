@@ -1,8 +1,8 @@
-import style from '../styles/index/Hero.module.scss'
+import style from '../styles/Hero.module.scss'
 import { BiCoffee } from 'react-icons/bi'
 import { useRouter } from 'next/router'
 
-export default function Hero() {
+export default function Hero({ title, btn }) {
     const router = useRouter();
     const handleClick = e => {
         e.preventDefault();
@@ -10,8 +10,8 @@ export default function Hero() {
     }
     return (
         <div className={`${style.heroContainer} container`}>
-            <h1 className="gradientTitle">Hello Guys! <br/> I'm Rudra.</h1>
-            <button onClick={handleClick} className="regular-btn"><BiCoffee />Explore</button>
+            <h1 className="gradientTitle">{title}</h1>
+            {btn && <button onClick={handleClick} className="regular-btn"><BiCoffee />{btn}</button>}
         </div>
     )
 } 

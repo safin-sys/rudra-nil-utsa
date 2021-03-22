@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import About from "../../components/About";
 import Footer from "../../components/Footer";
 import Divider from "../../components/Divider"
+import Hero from "../../components/Hero";
 
 export const getStaticProps = () => {
     const about = [
@@ -32,6 +33,8 @@ export default function AboutPage({ about }) {
                 <title>About | Rudra Nil Utsa</title>
             </Head>
             <Navbar />
+            <Hero title="About Me" />
+            <Divider />
             {about.map((abt, i) => {
                 return <About key={i} about={abt} left={i % 2 === 0? true : false} />
             })}
