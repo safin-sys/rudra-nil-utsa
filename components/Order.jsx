@@ -27,9 +27,9 @@ const Cards = ({name, des, price, words, currency, i}) => {
         router.push("/#talk")
     }
     const handleStar = () => {
-        let output = [<AiOutlineStar />]
-        for (let index = 0; index < i; index++) {
-            output.push(<AiOutlineStar />)
+        let output = []
+        for (let index = 0; index < i + 1; index++) {
+            output.push(<AiOutlineStar key={index} />)
         }
         return output
     }
