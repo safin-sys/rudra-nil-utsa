@@ -1,14 +1,52 @@
 .main {
-    color: white;
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     .cards {
-        margin: 1rem 0;
+        width: 220px;
+        height: 260px;
+        padding: 1rem;
+        background-color: #111;
+        transition: all .1s ease-in;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        h1 {
+            color: white;
+            word-wrap: break-word;
+        }
         h6 {
             font-size: .8rem;
             color: #dedede;
+            margin: .5rem 0 1rem 0;
         }
         p {
             font-size: .8rem;
             color: #6d6d6d;
+            margin-bottom: 1rem;
         }
+        button {
+            position: absolute;
+            bottom: .8rem;
+            left: 1rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            font-size: .8rem;
+            background-color: #111;
+            width: 100%;
+            border: none;
+            svg {
+                color: #74FE48;
+            }
+        }
+    }
+    .cards:hover {
+        transform: scale(1.08);
+        text-decoration: none;
     }
 }

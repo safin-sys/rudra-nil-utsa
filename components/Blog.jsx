@@ -1,9 +1,10 @@
 import style from '../styles/blog/Blog.module.scss'
+import { AiOutlineArrowRight } from "react-icons/ai"
 
 const blogs = [
-    {title: "Carter Whitehead", date: "1635728586"},
-	{title: "Colorado Marshall", date: "1601689917"},
-	{title: "Andrew Hicks", date: "1590316540"},
+    {title: "Marshall Mathers", date: "1635728586"},
+	{title: "Abel M. Tesfaye", date: "1601689917"},
+	{title: "Taylor Swift", date: "1590316540"},
 	{title: "Brennan Witt", date: "1644188407"},
 	{title: "Denton Mendoza", date: "1644157562"},
 	{title: "Conan Larsen", date: "1585762993"},
@@ -45,10 +46,11 @@ const Card = ({ title, date, content }) => {
     } 
     handleDate()
     return (
-        <div className={style.cards}>
+        <a href="#" className={style.cards}>
             <h1>{title}</h1>
             <h6>{`${handleDate().getDate()}/${handleDate().getMonth() + 1}/${handleDate().getFullYear()}`} {`${handleDate().getHours()}:${handleDate().getMinutes()}`}</h6>
             <p>{content}</p>
-        </div>
+            <button>Read More <AiOutlineArrowRight/></button>
+        </a>
     )
 }

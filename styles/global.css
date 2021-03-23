@@ -49,6 +49,13 @@ button:focus {
   background: #00C853 !important;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 85%;
