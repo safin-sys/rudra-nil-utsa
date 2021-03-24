@@ -1,5 +1,4 @@
 import Head from "next/head"
-import { useEffect } from "react"
 import Blog from "../../components/Blog"
 import Divider from "../../components/Divider"
 import Footer from "../../components/Footer"

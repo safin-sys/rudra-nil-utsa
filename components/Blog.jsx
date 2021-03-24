@@ -1,8 +1,6 @@
 import style from '../styles/blog/Blog.module.scss'
 import { AiOutlineArrowRight } from "react-icons/ai"
 
-const content = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor consequatur nesciunt obcaecati ut optio ipsam quisquam facere culpa et corporis impedit delectus maiores dolores praesentium fugiat, quaerat hic numquam? Aut."
-
 const Blog = ({ blogs }) => {
     return (
         <main className={`${style.main} container`}>
