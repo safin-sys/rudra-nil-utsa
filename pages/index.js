@@ -67,7 +67,7 @@ export default function Home({ services, packs }) {
       <Services services={services} />
       <Divider direction="right" />
       <Order packs={packs} />
-      <Divider direction="left" />
+      <Divider id="talk" direction="left" />
       <Talk />
       <Footer />
     </>

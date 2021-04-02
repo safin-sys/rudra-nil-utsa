@@ -1,6 +1,6 @@
 import style from '../styles/Divider.module.scss'
 
-const Divider = ({ direction }) => {
+const Divider = ({ direction, id }) => {
     const directionHandler = () => {
        if (direction === 'right') {
            return {
@@ -18,7 +18,7 @@ const Divider = ({ direction }) => {
     }
 
     return (
-        <div className={style.dividerCon}>
+        <div id={id} className={style.dividerCon}>
             <div className={style.vline}></div>
             <div style={directionHandler()} className={style.hline}></div>
         </div>

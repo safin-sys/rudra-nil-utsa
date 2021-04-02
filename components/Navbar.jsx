@@ -2,6 +2,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { FiTwitter, FiInstagram, FiGithub } from 'react-icons/fi'
 import { useRef } from 'react'
 import style from '../styles/Navbar.module.scss'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
     const mobileNav = useRef()
@@ -45,6 +46,7 @@ const Navbar = () => {
 export default Navbar
 
 const LinkList = () => {
+    const router = useRouter();
     const handleClick = e => {
         e.preventDefault();
         router.push("/#talk")
