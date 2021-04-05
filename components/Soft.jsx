@@ -12,7 +12,7 @@ const Soft = ({ softs, langColor }) => {
 
 const Cards = ({ soft, langColor }) => {
     return (
-        <a href="#" className={style.soft}>
+        <a href={`/soft/${soft.id}`} className={style.soft}>
             <h1 className={`${style.title} gradientTitle`}>{soft.title}</h1>
             <p className={style.des}>{soft.des}</p>
             <div className={style.bottom}>
