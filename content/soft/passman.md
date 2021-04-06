@@ -13,7 +13,8 @@ ss:
   - src: images/PassMan-SS4.png
     alt: Screenshot of PassMan mobile App
 ---
-\# PassMan\
+<!--StartFragment-->
+
 Passman is a password manager for everyday use.\
 \
 It uses AES 256 encryption which is strong enough to keep your passwords safe.\
@@ -27,34 +28,33 @@ The PMkey.md5 and passwords.pmdb files in your Documents folder is the holder of
 Don't lose those files even if the application is lost.\
 \
 \
-
-## How to use?
-
+## How to use?\
 \
 If you are launching the app for the first time you need to set a Master Password. This master password is the key to unlock the program and your passwords. You can change it later. If you are using android, it may have issues with permissions and fail to set the master password. Make sure you have allowed the "storage" permission, force close the application and restart. It shouldn't throw any more errors.\
 \
 There are four tabs in the application:\
 \
-
-* New\
-* Saved\
-* Master\
-* About\
-  \
-  You can use the first tab to add a new password to the database. Write the name of the site or program or wherever you use a password in the "Name" field. Write the ID and Password in the respective fields. You can also ask the program to generate a password for you. There are four options for generating passwords and they are self-explanatory.\
-  \
-  The second tab contains the password you have saved to the database. You can search the passwords using the searchbox. Select one from the list and click on "Delete" to remove it from the database, "Load" to load the Name-ID-Password in the first tab. You can use it from there. If you want to change the ID or Password, just change them in the respective fields and hit "Save to Database".\
-  \
-  The third tab is for changing the master password. Remember, once you change the master password, there is no going back. There are no recovery options in PassMan, so do remember your master password all the time.\
-  \
-  The fourth tab is about the developer and contains a bit of information about the program too.\
-  \
-
+- New\
+- Saved\
+- Master\
+- About\
+\
+You can use the first tab to add a new password to the database. Write the name of the site or program or wherever you use a password in the "Name" field. Write the ID and Password in the respective fields. You can also ask the program to generate a password for you. There are four options for generating passwords and they are self-explanatory.\
+\
+The second tab contains the password you have saved to the database. You can search the passwords using the searchbox. Select one from the list and click on "Delete" to remove it from the database, "Load" to load the Name-ID-Password in the first tab. You can use it from there. If you want to change the ID or Password, just change them in the respective fields and hit "Save to Database".\
+\
+The third tab is for changing the master password. Remember, once you change the master password, there is no going back. There are no recovery options in PassMan, so do remember your master password all the time.\
+\
+The fourth tab is about the developer and contains a bit of information about the program too.\
+\
 ### Keeping backups\
-
 If you are an Android user, look for Passwords.pmdb and PMKey.md5 in the documents folder of your Internal storage. These files contain the information and database of your passwords. Even if you reinstall the application, just keep these files and your passwords are safe.\
 \
 For Windows, these files are kept in %SYSTEMDRIVE%\Users\Public\Documents folder.
 
 \
 [Github Link](https://github.com/RUDRA78372/PassMan)
+
+
+
+<!--EndFragment-->
