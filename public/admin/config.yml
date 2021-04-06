@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  brand: master
+
+publish_mode: editorial_workflow
+media_folder: "/images"
+collections:
+  - name: "soft"
+    label: "Softwares"
+    folder: "/content/soft"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "des", widget: "string"}
+      - {label: "Language", name: "lang", widget: "string"}
+      - {label: "Platform", name: "plat", widget: "string"}
