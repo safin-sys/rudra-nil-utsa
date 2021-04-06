@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   brand: master
 
+local_backend: true
 publish_mode: editorial_workflow
 media_folder: "/images"
 collections:
@@ -15,3 +16,10 @@ collections:
       - {label: "Description", name: "des", widget: "string"}
       - {label: "Language", name: "lang", widget: "string"}
       - {label: "Platform", name: "plat", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Screenshots"
+        name: "ss"
+        widget: "list"
+        fields:
+          - { label: "Source", name: "src", widget: "string" }
+          - { label: "Alt Text", name: "alt", widget: "string" }
