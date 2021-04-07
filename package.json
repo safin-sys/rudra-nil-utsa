@@ -16,7 +16,6 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
-    "frontmatter-markdown-loader": "^3.6.2",
     "react-icons": "^4.2.0"
   }
 }
