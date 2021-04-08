@@ -4,8 +4,10 @@ import About from "../../components/About";
 import Footer from "../../components/Footer";
 import Divider from "../../components/Divider"
 import Hero from "../../components/Hero";
+import footerData from '../api/footerData'
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
+    const footer = await footerData()
     const about = [
         {
             title: "About Me",
@@ -22,11 +24,11 @@ export const getStaticProps = () => {
     ]
 
     return {
-        props: { about }
+        props: { about, footer }
     }
 }
 
-export default function AboutPage({ about }) {
+export default function AboutPage({ about, footer }) {
     return (
         <>
             <Head>
@@ -38,7 +40,7 @@ export default function AboutPage({ about }) {
             {about.map((abt, i) => {
                 return <About key={i} about={abt} left={i % 2 === 0? true : false} />
             })}
-            <Footer />
+            <Footer data={footer} />
         </>
     )
 }

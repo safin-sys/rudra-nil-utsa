@@ -5,6 +5,7 @@ import Hero from '../../components/Hero'
 import Navbar from '../../components/Navbar'
 import Soft from '../../components/Soft'
 import client from '../api/sanity'
+import footerData from '../api/footerData'
 
 
 export const getStaticProps = async () => {
@@ -20,15 +21,17 @@ export const getStaticProps = async () => {
         }
     })
 
+    const footer = await footerData();
     return {
         props: {
             softs,
-            langColor
+            langColor,
+            footer
         }
     }
 }
 
-const SoftwarePage = ({ softs, langColor }) => {
+const SoftwarePage = ({ softs, langColor, footer }) => {
     return (
         <>
             <Head>
@@ -38,7 +41,7 @@ const SoftwarePage = ({ softs, langColor }) => {
             <Hero title="Softwares I Made" />
             <Divider />
             <Soft softs={softs} langColor={langColor} />
-            <Footer />
+            <Footer data={footer} />
         </>
     )
 }

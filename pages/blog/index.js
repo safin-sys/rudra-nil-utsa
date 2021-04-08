@@ -4,6 +4,7 @@ import Divider from "../../components/Divider"
 import Footer from "../../components/Footer"
 import Hero from "../../components/Hero"
 import Navbar from "../../components/Navbar"
+import footerData from '../api/footerData'
 
 export const getStaticProps = async () => {
     const link = "https://www.googleapis.com/blogger/v3/blogs/990517938631563196/posts?callback=handleResponse&key=AIzaSyAJESQB3ddltUcDbZif3LUnX-Gzr18tBRg";
@@ -13,12 +14,13 @@ export const getStaticProps = async () => {
     
     const blogs = JSON.parse(data.replace(/^[^\(]*\(/, '').replace(/\);$/, ''));
 
+    const footer = await footerData();
     return {
-        props: { blogs: blogs.items }
+        props: { blogs: blogs.items, footer }
     }
 }
 
-const BlogPage = ({ blogs }) => {
+const BlogPage = ({ blogs, footer }) => {
     return (
         <>
             <Head>
@@ -28,7 +30,7 @@ const BlogPage = ({ blogs }) => {
             <Hero title="Welcome To My Blog" />
             <Divider direction="right" />
             <Blog blogs={blogs} />
-            <Footer />
+            <Footer data={footer} />
         </>
     )
 }
