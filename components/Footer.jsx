@@ -2,7 +2,7 @@ import { AiOutlineArrowUp, AiOutlinePhone, AiOutlineMail } from 'react-icons/ai'
 import { FiTwitter, FiInstagram, FiGithub, FiMapPin } from 'react-icons/fi'
 import style from '../styles/Footer.module.scss'
 
-const Footer = () => {
+const Footer = ({ data }) => {
     const getFullYear =() => {
         return new Date().getFullYear();
     }
@@ -11,42 +11,36 @@ const Footer = () => {
             <div className={style.top}>
                 <div className={`${style.topCon} container`}>
                     <div className={style.about}>
-                        <h1 className={`${style.title} gradientTitle`}>Rudra Nil Utsa.</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reiciendis sint quae explicabo tempora perferendis suscipit dolore.</p>
+                        <h1 className={`${style.title} gradientTitle`}>{data.title}</h1>
+                        <p>{data.description}</p>
                         <div className={style.social}>
-                            <a href="#"><FiTwitter /></a>
-                            <a href="#"><FiInstagram /></a>
-                            <a href="#"><FiGithub /></a>
+                            <a href={data.socials[1].link} target="_blank" rel="noopener noreferrer"><FiTwitter /></a>
+                            <a href={data.socials[2].link} target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
+                            <a href={data.socials[0].link} target="_blank" rel="noopener noreferrer"><FiGithub /></a>
                         </div>
                     </div>
                     <div className={style.git}>
                         <h1>Get In Touch</h1>
                         <div className={style.contact}>
-                            <a href="#"> <AiOutlinePhone /> +880 170 0000 000</a>
-                            <a href="#"> <AiOutlineMail /> example@example.com</a>
-                            <a href="#"> <FiMapPin className={style.address} /> Savar, Dhaka, Bangladesh</a>
+                            <a href={`tel:${data.getInTouch[0].phone}`}> <AiOutlinePhone /> {data.getInTouch[0].phone}</a>
+                            <a href={`mailto:${data.getInTouch[1].mail}`}> <AiOutlineMail /> {data.getInTouch[1].mail}</a>
+                            <a href={`https://www.google.com/maps/place/${data.getInTouch[2].address}/`} target="_blank" rel="noopener noreferrer"> <FiMapPin className={style.address} /> {data.getInTouch[2].address}</a>
                         </div>
-                        <button className="regular-btn">Send A Message</button>
                     </div>
                     <div className={style.tags}>
                         <h1>Popular Tags</h1>
                         <div className={style.tagCon}>
-                            <p>Mobile</p>
-                            <p>Development</p>
-                            <p>Technology</p>
-                            <p>App</p>
-                            <p>Education</p>
-                            <p>Business</p>
-                            <p>Health</p>
-                            <p>Industry</p>
+                            {data.popularTags.map((tag, i) => {
+                                return <p key={i}>{tag}</p>
+                            })}
                         </div>
                     </div>
                 </div>
             </div>
             <div className={style.bottom}>
                 <div className="container">
-                    <p>Looks like you've reached the bottom of the page, Thanks for sticking around this long.</p>
-                    <p className="copywrite">© {getFullYear()} Rudra Nil Utsa all rights reserved</p>
+                    <p>{data.footerFooter}</p>
+                    <p className="copywrite">© {getFullYear()} {data.copyright}</p>
                     <a role="button" href="#"><AiOutlineArrowUp /></a>
                 </div>
             </div>

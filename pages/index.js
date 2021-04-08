@@ -7,8 +7,11 @@ import Navbar from '../components/Navbar'
 import Services from '../components/Services'
 import Talk from '../components/Talk'
 import Order from '../components/Order'
+import footerData from './api/footerData'
 
-export const getStaticProps = () => {
+
+export const getStaticProps = async () => {
+  const footer = await footerData()
   const services = [
       {
           name: "Windows Applications",
@@ -47,12 +50,12 @@ export const getStaticProps = () => {
     }
   ]
   return {
-      props: { services, packs }
+      props: { services, packs, footer }
   }
 }
 
 
-export default function Home({ services, packs }) {
+export default function Home({ services, packs, footer }) {
   return (
     <>
       <Head>
@@ -69,7 +72,7 @@ export default function Home({ services, packs }) {
       <Order packs={packs} />
       <Divider id="talk" direction="left" />
       <Talk />
-      <Footer />
+      <Footer data={footer} />
     </>
   )
 }
