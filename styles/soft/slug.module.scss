@@ -1,0 +1,30 @@
+.softPage {
+    color: white;
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+    .richTextCon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 4rem;
+        p {
+            max-width: 60ch;
+        }
+        .ssCon {
+            h1 {
+                margin-bottom: 1rem;
+            }
+            .ss {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    }
+}
