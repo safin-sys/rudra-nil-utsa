@@ -6,8 +6,8 @@ const Order = ({ packs }) => {
     return (
         <div className={`${style.orderCon} container`}>
             <header>
-                <h1>Order Now</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sed deserunt.</p>
+                <h1>{packs.title}</h1>
+                <p>{packs.des}</p>
             </header>
             <main>
                 {packs.packageList.map((pack, i) => {
