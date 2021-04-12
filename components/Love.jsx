@@ -1,35 +1,16 @@
-import { useEffect, useState } from 'react'
 import style from '../styles/index/Love.module.scss'
 import { Circle } from 'rc-progress'
 
-const Love = () => {
-    const [skills] = useState(
-        [
-            {
-                name: "Programming",
-                percent: 60
-            },
-            {
-                name: "Content Writing",
-                percent: 80
-            },
-            {
-                name: "Video Editing",
-                percent: 20
-            },
-        ]
-    )
+const Love = ({ skills }) => {   
     return (
         <section id="love" className={style.loveContainer}>
             <header>
-                <h1>Skills</h1>
-                <p>
-                    There is no difference between my skills and what I actually love doing. Here's what I love doing or my skills at a glance.
-                </p>
+                <h1>{skills.title}</h1>
+                <p>{skills.des}</p>
             </header>
             <div className={style.skills}>
-                {skills.map((skill, i) => {
-                    return <Skills key={i} name={skill.name} percent={skill.percent} />
+                {skills.skillList.map((skill, i) => {
+                    return <Skills key={i} name={skill.title} percent={skill.percent} />
                 })}
             </div>
         </section>

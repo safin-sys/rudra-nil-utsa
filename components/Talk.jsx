@@ -1,14 +1,14 @@
 import style from '../styles/index/Talk.module.scss'
 import { AiOutlineSend } from 'react-icons/ai'
 
-const Talk = () => {
+const Talk = ({ title, des }) => {
     return (
         <div className={`${style.talk} container`}>
             <div className={style.talkCon}>
                 <header>
                     <div className={style.hline}></div>
-                    <h1>Let's Talk?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, doloremque amet. Sint, blanditiis omnis.</p>
+                    <h1>{title}</h1>
+                    <p>{des}</p>
                 </header>
                 
                 <form name="contact-form" method="POST" data-netlify="true">

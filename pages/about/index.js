@@ -23,8 +23,6 @@ export const getStaticProps = async () => {
 }
 
 export default function AboutPage({ about, title, footer }) {
-    console.log(title);
-    console.log(about);
     return (
         <>
             <Head>

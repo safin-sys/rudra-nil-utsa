@@ -8,54 +8,41 @@ import Services from '../components/Services'
 import Talk from '../components/Talk'
 import Order from '../components/Order'
 import footerData from './api/footerData'
+import client from './api/sanity'
 
 
 export const getStaticProps = async () => {
   const footer = await footerData()
-  const services = [
-      {
-          name: "Windows Applications",
-          des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem labore veritatis similique maxime excepturi officia."
-      },
-      {
-          name: "Articles for your website",
-          des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem labore veritatis similique maxime excepturi officia."
-      },
-      {
-          name: "Android Apps",
-          des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem labore veritatis similique maxime excepturi officia."
-      },
-  ]
-  const packs = [
-    {
-        name: "Pack #1",
-        des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis hic veritatis repellat iusto voluptatem temporibus quae eius magnam porro neque autem veniam aperiam, commodi dolores. Cum delectus id repellat commodi?",
-        price: 5,
-        words: 500,
-        currency: "$"
-    },
-    {
-        name: "Pack #2",
-        des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis hic veritatis repellat iusto voluptatem temporibus quae eius magnam porro neque autem veniam aperiam, commodi dolores. Cum delectus id repellat commodi?",
-        price: 10,
-        words: 1000,
-        currency: "$"
-    },
-    {
-        name: "Pack #3",
-        des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis hic veritatis repellat iusto voluptatem temporibus quae eius magnam porro neque autem veniam aperiam, commodi dolores. Cum delectus id repellat commodi?",
-        price: 50,
-        words: 5000,
-        currency: "$"
-    }
-  ]
+  const home = await client.fetch(`*[_type == 'home'][0]`)
+  const skills = {
+    title: home.skills.title,
+    des: home.skills.description,
+    skillList: home.skills.skillList
+  }
+  const services = {
+    title: home.myServices.title,
+    des: home.myServices.description,
+    list: home.myServices.serviceList
+  }
+  const packs = {
+    title: home.orderNow.title,
+    des: home.orderNow.description,
+    packageList: home.orderNow.packageList
+  }
   return {
-      props: { services, packs, footer }
+      props: {
+        title: home.heroText,
+        skills,
+        services,
+        packs,
+        talk: home.letsTalk,
+        footer
+      }
   }
 }
 
 
-export default function Home({ services, packs, footer }) {
+export default function Home({ title, skills, services, packs, talk, footer }) {
   return (
     <>
       <Head>
@@ -63,15 +50,15 @@ export default function Home({ services, packs, footer }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero title="Hello Guys! I'm Rudra." btn="Explore" />
+      <Hero title={title} btn="Explore" />
       <Divider direction="right" />
-      <Love />
+      <Love skills={skills} />
       <Divider direction="left" />
       <Services services={services} />
       <Divider direction="right" />
       <Order packs={packs} />
       <Divider id="talk" direction="left" />
-      <Talk />
+      <Talk title={talk.title} des={talk.description} />
       <Footer data={footer} />
     </>
   )

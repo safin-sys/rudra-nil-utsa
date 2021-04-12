@@ -11,12 +11,12 @@ const Services = ({ services }) => {
     return (
         <div className={`${style.servicesCon} container`}>
             <header>
-                <h1>My Services</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sed deserunt.</p>
+                <h1>{services.title}</h1>
+                <p>{services.des}</p>
             </header>
             <main>
-                {services.map((service, i) => {
-                return <Cards key={i} icon={icons[i]} name={service.name} des={service.des} />
+                {services.list.map((service, i) => {
+                return <Cards key={i} icon={icons[i]} name={service.serviceName} des={service.description} />
                 })}
             </main>
         </div>
