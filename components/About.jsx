@@ -5,7 +5,7 @@ const About = ({ about, left }) => {
         <main style={{flexDirection: left ? "" : "row-reverse"}} className={`${style.main} container`}>
             <h1 className={style.title}>{about.title}</h1>
             <Divider />
-            <p>{about.des}</p>
+            <p>{about.description}</p>
         </main>
     )
 }

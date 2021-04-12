@@ -5,37 +5,33 @@ import Footer from "../../components/Footer";
 import Divider from "../../components/Divider"
 import Hero from "../../components/Hero";
 import footerData from '../api/footerData'
+import client from '../api/sanity'
 
 export const getStaticProps = async () => {
     const footer = await footerData()
-    const about = [
-        {
-            title: "About Me",
-            des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores rem, maiores, reiciendis perferendis quia iusto doloribus quidem sunt, cum facere accusantium perspiciatis a? Tempore neque animi voluptate laboriosam quisquam laudantium quae officiis ea deleniti ut optio, libero rerum architecto autem, vero minima veritatis rem ratione debitis? Libero rerum nostrum cum!"
-        },
-        {
-            title: "Why Pascal is the best",
-            des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores rem, maiores, reiciendis perferendis quia iusto doloribus quidem sunt, cum facere accusantium perspiciatis a? Tempore neque animi voluptate laboriosam quisquam laudantium quae officiis ea deleniti ut optio, libero rerum architecto autem, vero minima veritatis rem ratione debitis? Libero rerum nostrum cum!"
-        },
-        {
-            title: "The Third Paragraph",
-            des: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores rem, maiores, reiciendis perferendis quia iusto doloribus quidem sunt, cum facere accusantium perspiciatis a? Tempore neque animi voluptate laboriosam quisquam laudantium quae officiis ea deleniti ut optio, libero rerum architecto autem, vero minima veritatis rem ratione debitis? Libero rerum nostrum cum!"
-        },
-    ]
+    const about = await client.fetch(`*[_type == 'about'][0]`)
+    const title = about.heroTitle
+    const para = about.paragraphList
 
     return {
-        props: { about, footer }
+        props: {
+            about: para,
+            title,
+            footer
+        }
     }
 }
 
-export default function AboutPage({ about, footer }) {
+export default function AboutPage({ about, title, footer }) {
+    console.log(title);
+    console.log(about);
     return (
         <>
             <Head>
                 <title>About | Rudra Nil Utsa</title>
             </Head>
             <Navbar />
-            <Hero title="About Me" />
+            <Hero title={title} />
             <Divider />
             {about.map((abt, i) => {
                 return <About key={i} about={abt} left={i % 2 === 0? true : false} />
