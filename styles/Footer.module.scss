@@ -42,11 +42,13 @@
                         color: #6d6d6d;
                         text-decoration: none;
                         margin: .5rem 0;
+                        display: flex;
+                        align-items: center;
                         svg {
                             fill: #6d6d6d;
                             width: .8rem;
                             height: .8rem;
-                            margin-right: .2rem;
+                            margin-right: .5rem;
                         }
                         .address {
                             fill: none;

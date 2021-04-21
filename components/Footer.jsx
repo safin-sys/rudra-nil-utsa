@@ -1,4 +1,4 @@
-import { AiOutlineArrowUp, AiOutlinePhone, AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineArrowUp, AiOutlineMail } from 'react-icons/ai'
 import { FiTwitter, FiInstagram, FiGithub, FiMapPin } from 'react-icons/fi'
 import style from '../styles/Footer.module.scss'
 
@@ -22,9 +22,8 @@ const Footer = ({ data }) => {
                     <div className={style.git}>
                         <h1>Get In Touch</h1>
                         <div className={style.contact}>
-                            <a href={`tel:${data.getInTouch[0].phone}`}> <AiOutlinePhone /> {data.getInTouch[0].phone}</a>
-                            <a href={`mailto:${data.getInTouch[1].mail}`}> <AiOutlineMail /> {data.getInTouch[1].mail}</a>
-                            <a href={`https://www.google.com/maps/place/${data.getInTouch[2].address}/`} target="_blank" rel="noopener noreferrer"> <FiMapPin className={style.address} /> {data.getInTouch[2].address}</a>
+                            <a href={`mailto:${data.getInTouch[0].mail}`}> <AiOutlineMail /> {data.getInTouch[0].mail}</a>
+                            <a href={`https://www.google.com/maps/place/${data.getInTouch[1].address}/`} target="_blank" rel="noopener noreferrer"> <FiMapPin className={style.address} /> {data.getInTouch[1].address}</a>
                         </div>
                     </div>
                     <div className={style.tags}>
