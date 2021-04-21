@@ -11,7 +11,7 @@ const Order = ({ packs }) => {
             </header>
             <main>
                 {packs.packageList.map((pack, i) => {
-                    return <Cards key={i} name={pack.packageName} des={pack.description} price={pack.price} words={pack.words} currency={pack.currency} />
+                    return <Cards key={i} name={pack.packageName} stars={pack.stars} des={pack.description} price={pack.price} words={pack.words} currency={pack.currency} />
                 })}
             </main>
         </div>
@@ -20,15 +20,22 @@ const Order = ({ packs }) => {
 
 export default Order
 
-const Cards = ({name, des, price, words, currency}) => {
+const Cards = ({name, stars, des, price, words, currency}) => {
     const router = useRouter();
     const handleClick = e => {
         e.preventDefault();
         router.push("/#talk")
     }
+    const handleStar = () => {
+        const s = [];
+        for(let i = 0; i < stars; i++) {
+            s.push(<AiOutlineStar key={i} />)
+        }
+        return s
+    }
     return (
         <div className={style.card}>
-            <AiOutlineStar />
+            {handleStar()}
             <h1 className={style.title}>{name}</h1>
             <h1 className={style.price}>{price}{currency} / {words}</h1>
             <p>{des}</p>

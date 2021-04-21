@@ -28,15 +28,15 @@ const Navbar = () => {
                     <a href="/">Rudra Nil Utsa</a>
                 </h1>
                 <LinkList />
-                <button onClick={handleMenuBtn} className={`${style.menuBtn} btnActive`} ref={menuBtn}><AiOutlineMenu /></button>
-                <button onClick={handleMenuBtn} className={style.closeBtn} ref={closeBtn}><AiOutlineClose /></button>
+                <button onClick={handleMenuBtn} className={`${style.menuBtn} btnActive`} ref={menuBtn}><AiOutlineMenu />Menu Button</button>
+                <button onClick={handleMenuBtn} className={style.closeBtn} ref={closeBtn}><AiOutlineClose />Close Menu Button</button>
             </nav>
             <div className={style.mobileNav} ref={mobileNav}>
                 <LinkList />
                 <div className={style.social}>
-                    <a href="#"><FiTwitter /></a>
-                    <a href="#"><FiInstagram /></a>
-                    <a href="#"><FiGithub /></a>
+                    <a href="#"><FiTwitter />Twitter</a>
+                    <a href="#"><FiInstagram />Instagram</a>
+                    <a href="#"><FiGithub />Github</a>
                 </div>
             </div>
         </header>

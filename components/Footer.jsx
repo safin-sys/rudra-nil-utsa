@@ -14,9 +14,9 @@ const Footer = ({ data }) => {
                         <h1 className={`${style.title} gradientTitle`}>{data.title}</h1>
                         <p>{data.description}</p>
                         <div className={style.social}>
-                            <a href={data.socials[1].link} target="_blank" rel="noopener noreferrer"><FiTwitter /></a>
-                            <a href={data.socials[2].link} target="_blank" rel="noopener noreferrer"><FiInstagram /></a>
-                            <a href={data.socials[0].link} target="_blank" rel="noopener noreferrer"><FiGithub /></a>
+                            <a href={data.socials[1].link} target="_blank" rel="noopener noreferrer"><FiTwitter />Twitter</a>
+                            <a href={data.socials[2].link} target="_blank" rel="noopener noreferrer"><FiInstagram />Instagram</a>
+                            <a href={data.socials[0].link} target="_blank" rel="noopener noreferrer"><FiGithub />Github</a>
                         </div>
                     </div>
                     <div className={style.git}>
@@ -40,7 +40,7 @@ const Footer = ({ data }) => {
                 <div className="container">
                     <p>{data.footerFooter}</p>
                     <p className="copywrite">© {getFullYear()} {data.copyright}</p>
-                    <a role="button" href="#"><AiOutlineArrowUp /></a>
+                    <a role="button" href="#"><AiOutlineArrowUp />To The Top</a>
                 </div>
             </div>
         </footer>
